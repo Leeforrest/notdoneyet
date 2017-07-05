@@ -1,11 +1,5 @@
 package array;
 
-import org.apache.commons.lang3.ArrayUtils;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Given a non-negative integer represented as a non-empty array of digits, plus one to the integer.
  * You may assume the integer do not contain any leading zero, except the number 0 itself.
@@ -13,6 +7,8 @@ import java.util.List;
  * 给定一个整数，表现形式是一个数组，比如123, 表示为{1,2,3}， 给这个数+1
  * author: Forrest
  * date: 2017/7/4
+ * topic from ：https://leetcode.com/problems/plus-one/#/description
+ * ref : https://siddontang.gitbooks.io/leetcode-solution/content/array/plus_one.html
  */
 public class PlusOne {
     public int[] plusOne(int[] digits) {

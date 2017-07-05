@@ -9,6 +9,8 @@ package array;
  * 从排好序的数组中删除重复次数大于2的元素，并且返回数组的长度，{@link RemoveElement}
  * author: Forrest
  * date: 2017/7/4
+ * topic from: https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/#/description
+ * ref: https://siddontang.gitbooks.io/leetcode-solution/content/array/remove_duplicates_from_sorted_array.html
  */
 public class RemoveDuplicatesFromSortedArrayII {
     public int removeDuplicates(int[] nums) {

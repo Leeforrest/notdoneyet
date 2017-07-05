@@ -8,6 +8,8 @@ package array;
  * 就是说这里的需求就是要计算去掉数组中指定的元素后数组的长度是多少...
  * author : Forrest
  * date : 2017/7/4.
+ * topic from: https://leetcode.com/problems/remove-element/#/description
+ * ref: https://siddontang.gitbooks.io/leetcode-solution/content/array/remove_element.html
  */
 public class RemoveElement {
 

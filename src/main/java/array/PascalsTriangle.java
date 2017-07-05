@@ -5,10 +5,8 @@ import java.util.List;
 
 /**
  * Given numRows, generate the first numRows of Pascal's triangle.
-
  * For example, given numRows = 5,
  * Return
-
  * [
  *        [1],
  *      [1,1],
@@ -22,6 +20,8 @@ import java.util.List;
  *      第m(m>2)层第n(n不是第一个也不是最后一个)个元素，v[m][n]=v[m-1][n-1] + v[m-1][n]
  * author : Forrest
  * date : 2017/7/5.
+ * topic from ：https://leetcode.com/problems/pascals-triangle/#/description
+ * ref : https://siddontang.gitbooks.io/leetcode-solution/content/array/pascals_triangle.html
  */
 public class PascalsTriangle {
     public List<List<Integer>> generate(int numRows) {
