@@ -55,6 +55,9 @@ public class ThreeSum {
 
     /**
      * 这个前辈的方法，效率比我的递归高出了几十倍，但是理解起来实在有点难度
+     * 不过虽然是好几个while，还有好几个变量加减，仔细看看其实不难理解
+     * 本题前辈的做法是将数据排序，然后通过三个指针i,j,k分别是i从数组头部开始j比i大1，k指向数组尾部，
+     * 首先将list数据排序这个很关键，因为我们要求三个数的和=0，当我们从list的两端取数据的时候，如果数据>0，因为list已经是有序的那么说明高位数值大，需要向低位移动
      */
     public List<List<Integer>>threeSum(List<Integer>nums) {
         List<List<Integer>>result = new ArrayList<>();
@@ -77,11 +80,11 @@ public class ThreeSum {
                     list.add(nums.get(j));
                     list.add(nums.get(k));
                     result.add(list);
-                    ++j;--k;
-                    while(j<k && nums.get(j-1) == nums.get(j)) {
+                    ++j;--k;//因为i,j,k对应值已经=0，list有序所以j单独增加结果将>0，k独自减小讲<0,所以++j,--k
+                    while(j<k && nums.get(j-1) == nums.get(j)) {//因为最终结果不需要重复的所以排除值与当前值相同的
                         ++j;
                     }
-                    while(j <k && nums.get(k) == nums.get(k+1)) {
+                    while(j <k && nums.get(k) == nums.get(k+1)) {//因为最终结果不需要重复的所以排除值与当前值相同的
                         --k;
                     }
                 } else if(nums.get(i) + nums.get(j) + nums.get(k) < 0){
@@ -91,6 +94,7 @@ public class ThreeSum {
                 }
                 
             }
+            //当索引对应的值A与其他数据算过一遍之后，i后边的数据如果值与A相等那就不用算了，因为结果不需要重复的组合，（前面的排序在这里也起到了关键作用）
             while (i < nums.size()-1 && nums.get(i) == nums.get(i + 1)) {
                 ++i;
             }
