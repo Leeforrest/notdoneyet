@@ -1,5 +1,8 @@
 package array;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
@@ -17,6 +20,20 @@ package array;
  */
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
-        return  null;
+        Map<Integer, Integer> valueIndexMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            valueIndexMap.put(nums[i], i);
+        }
+        int[]result = new int[2];
+        for (int i = 0; i < nums.length; i++) {
+            int remain = target - nums[i];
+            Integer remainIndex = valueIndexMap.get(remain);
+            if (remainIndex != null && remainIndex != i) {
+                result[0] = i;
+                result[1] = valueIndexMap.get(remain);
+                return result;
+            }
+        }
+        return result;
     }
 }
